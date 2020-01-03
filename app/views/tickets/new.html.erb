@@ -1,8 +1,8 @@
-<h2>New project</h2>
+<h2>New Ticket</h2>
 <%= yield %>
 <% flash.each do |key, value| %>
   <div class='flash' id='<%= key %>'>
     <%= value %>
   </div>
 <% end %>
-<%= render "forms" %>
+<%= render "form" %>

@@ -1,0 +1,22 @@
+<%= form_for(@project) do |f| %>
+
+  <% if @project.errors.any? %>
+    <div>
+      <h2><%= pluralize(@project.errors.count, "Error") %>  "Prohabited this page from being persisted"</h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %></br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.submit %>
+  </p>
+<% end %>
